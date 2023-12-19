@@ -56,7 +56,7 @@ func initDB() *gorm.DB {
 	// データベースに接続
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
-		panic("データベース接続に失敗しました: " + err.Error())
+		panic("Fail to insert new record: " + err.Error())
 	}
 	return db
 }
