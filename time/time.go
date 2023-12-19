@@ -18,6 +18,6 @@ func InsertTimeRecord(db *gorm.DB, status string, createdAt time.Time) {
 	timeRecord := Time{Status: status, CreatedAt: createdAt}
 	result := db.Create(&timeRecord)
 	if result.Error != nil {
-		panic("レコードの挿入に失敗しました: " + result.Error.Error())
+		panic("fail to insert record: " + result.Error.Error())
 	}
 }
