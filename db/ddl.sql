@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS times (
+    id SERIAL PRIMARY KEY,
+    status VARCHAR(5) NOT NULL,
+    createdAt TIMESTAMP NOT NULL
+);
